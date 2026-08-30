@@ -1,15 +1,17 @@
 # Lyrikai Themes
 
-Warm cream editor themes for **VS Code** and **Cursor**, built from an original MIT TypeScript palette pipeline.
+Warm cream and pure-black editor themes for **VS Code** and **Cursor**, built from an original MIT TypeScript palette pipeline.
 
 - **Extension id:** `lyrikai.lyrikai-themes`
-- **Skin 01:** Lyrikai Themes Cream Bright
+- **Skin 01:** Lyrikai Themes Cream Bright (light)
+- **Skin 02:** Lyrikai Themes Black Prism (dark)
 
 ## Architecture
 
 ```
 library/                          Source of truth (variations + generator)
-  src/variations/cream-bright.ts  Original MIT hex palette
+  src/variations/cream-bright.ts  Skin 01 — warm cream palette
+  src/variations/black-prism.ts   Skin 02 — pure black palette
   src/generators/vscode/          UI colors + tokenColors → JSON
 extensions/lyrikai-themes/        Installable VS Code extension
   themes/*.json                   Generated theme files (committed)
@@ -29,14 +31,14 @@ extensions/lyrikai-themes/        Installable VS Code extension
 npm install
 npm run build
 cd extensions/lyrikai-themes
-npx @vscode/vsce package --out ./releases/lyrikai-themes-0.1.0.vsix
+npx @vscode/vsce package --out ./releases/lyrikai-themes-0.2.0.vsix
 ```
 
 Then in VS Code / Cursor:
 
 1. **Cmd+Shift+P** → **Extensions: Install from VSIX…**
-2. Choose `extensions/lyrikai-themes/releases/lyrikai-themes-0.1.0.vsix`
-3. **Cmd+Shift+P** → **Preferences: Color Theme** → **Lyrikai Themes Cream Bright**
+2. Choose `extensions/lyrikai-themes/releases/lyrikai-themes-0.2.0.vsix`
+3. **Cmd+Shift+P** → **Preferences: Color Theme** → **Lyrikai Themes Cream Bright** or **Lyrikai Themes Black Prism**
 
 ## Build
 
@@ -62,4 +64,4 @@ MIT — see [LICENSE](./LICENSE). All palette hex values are original Lyrikai wo
 ## Planning docs
 
 - [END-GOAL](.admin/docs/plan-suites/lyrikai-themes/END-GOAL.md)
-- [Art direction — Skin 01](.admin/docs/plan-suites/lyrikai-themes/specs/art-direction.md)
+- [Art direction — Skins 01 & 02](.admin/docs/plan-suites/lyrikai-themes/specs/art-direction.md)

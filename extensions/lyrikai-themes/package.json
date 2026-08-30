@@ -1,15 +1,15 @@
 {
   "name": "lyrikai-themes",
   "displayName": "Lyrikai Themes",
-  "description": "Warm cream editor themes with high-chroma syntax — original MIT work by Lyrikai.",
-  "version": "0.1.0",
+  "description": "Warm cream and pure-black editor themes with high-chroma syntax — original MIT work by Lyrikai.",
+  "version": "0.2.0",
   "publisher": "lyrikai",
   "license": "MIT",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": ["Themes"],
-  "keywords": ["theme", "light", "cream", "warm", "lyrikai", "syntax"],
+  "keywords": ["theme", "light", "dark", "cream", "black", "warm", "lyrikai", "syntax"],
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
@@ -21,11 +21,16 @@
         "label": "Lyrikai Themes Cream Bright",
         "uiTheme": "vs",
         "path": "./themes/lyrikai-themes-cream-bright.json"
+      },
+      {
+        "label": "Lyrikai Themes Black Prism",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-black-prism.json"
       }
     ]
   },
   "scripts": {
-    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-0.1.0.vsix"
+    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-0.2.0.vsix"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.0"

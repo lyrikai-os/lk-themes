@@ -8,7 +8,7 @@ export function generateVscodeTheme(variation: ThemeVariation): VscodeThemeJson 
   return {
     $schema: "vscode://schemas/color-theme",
     name: label,
-    type: "light",
+    type: variation.uiTheme === "vs-dark" ? "dark" : "light",
     colors: buildUiColors(palette),
     tokenColors: buildTokenColors(palette),
     semanticHighlighting: true,
