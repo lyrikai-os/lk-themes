@@ -1,0 +1,15 @@
+{
+  "name": "lyrikai-themes-workspace",
+  "private": true,
+  "description": "Lyrikai Themes — warm cream editor themes for VS Code / Cursor",
+  "license": "MIT",
+  "workspaces": [
+    "library",
+    "extensions/lyrikai-themes"
+  ],
+  "scripts": {
+    "build": "npm run build -w library",
+    "build:ext": "npm run build && npm run package -w lyrikai-themes",
+    "package": "npm run package -w lyrikai-themes"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "lyrikai-themes",
+  "displayName": "Lyrikai Themes",
+  "description": "Warm cream, pure-black, and Role Spectrum editor themes with high-chroma syntax — original MIT work by Lyrikai.",
+  "version": "0.3.1",
+  "publisher": "lyrikai",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["theme", "light", "dark", "cream", "black", "warm", "lyrikai", "syntax", "semantic"],
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyrikai/ide-styles"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lyrikai Themes Cream Bright",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-cream-bright.json"
+      },
+      {
+        "label": "Lyrikai Themes Black Prism",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-black-prism.json"
+      },
+      {
+        "label": "Lyrikai Themes Role Spectrum Bright",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-role-spectrum-bright.json"
+      },
+      {
+        "label": "Lyrikai Themes Role Spectrum Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-role-spectrum-dark.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-0.3.1.vsix"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0"
+  }
+}
