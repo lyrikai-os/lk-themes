@@ -1,20 +1,24 @@
 # Lyrikai Themes
 
-Warm cream and pure-black editor themes for **VS Code** and **Cursor**, built from an original MIT TypeScript palette pipeline.
+Warm cream, pure-black, and Role Spectrum editor themes for **VS Code** and **Cursor**, built from an original MIT TypeScript palette pipeline.
 
 - **Extension id:** `lyrikai.lyrikai-themes`
-- **Skin 01:** Lyrikai Themes Cream Bright (light)
-- **Skin 02:** Lyrikai Themes Black Prism (dark)
+- **Skin 01:** Lyrikai Themes Cream Bright (light, classic)
+- **Skin 02:** Lyrikai Themes Black Prism (dark, classic)
+- **Skin 03:** Lyrikai Themes Role Spectrum Bright + Dark (HSL spectral roles, cool mist / indigo-black grounds)
 
 ## Architecture
 
 ```
-library/                          Source of truth (variations + generator)
-  src/variations/cream-bright.ts  Skin 01 — warm cream palette
-  src/variations/black-prism.ts   Skin 02 — pure black palette
-  src/generators/vscode/          UI colors + tokenColors → JSON
-extensions/lyrikai-themes/        Installable VS Code extension
-  themes/*.json                   Generated theme files (committed)
+library/                                    Source of truth (variations + generator)
+  src/variations/cream-bright.ts            Skin 01 — warm cream palette
+  src/variations/black-prism.ts             Skin 02 — pure black palette
+  src/variations/role-spectrum-shared.ts    Skin 03 — HSL role table + spectral grounds
+  src/variations/role-spectrum-bright.ts    Skin 03a — bright ground
+  src/variations/role-spectrum-dark.ts      Skin 03b — dark ground
+  src/generators/vscode/                    UI colors + tokenColors → JSON
+extensions/lyrikai-themes/                  Installable VS Code extension
+  themes/*.json                             Generated theme files (committed)
 ```
 
 ## Quick start — development (F5)
@@ -31,14 +35,14 @@ extensions/lyrikai-themes/        Installable VS Code extension
 npm install
 npm run build
 cd extensions/lyrikai-themes
-npx @vscode/vsce package --out ./releases/lyrikai-themes-0.2.0.vsix
+npx @vscode/vsce package --out ./releases/lyrikai-themes-0.3.0.vsix
 ```
 
 Then in VS Code / Cursor:
 
 1. **Cmd+Shift+P** → **Extensions: Install from VSIX…**
-2. Choose `extensions/lyrikai-themes/releases/lyrikai-themes-0.2.0.vsix`
-3. **Cmd+Shift+P** → **Preferences: Color Theme** → **Lyrikai Themes Cream Bright** or **Lyrikai Themes Black Prism**
+2. Choose `extensions/lyrikai-themes/releases/lyrikai-themes-0.3.0.vsix`
+3. **Cmd+Shift+P** → **Preferences: Color Theme** → pick any Lyrikai theme (Cream Bright, Black Prism, Role Spectrum Bright, Role Spectrum Dark)
 
 ## Build
 
@@ -64,4 +68,4 @@ MIT — see [LICENSE](./LICENSE). All palette hex values are original Lyrikai wo
 ## Planning docs
 
 - [END-GOAL](.admin/docs/plan-suites/lyrikai-themes/END-GOAL.md)
-- [Art direction — Skins 01 & 02](.admin/docs/plan-suites/lyrikai-themes/specs/art-direction.md)
+- [Art direction — Skins 01–03](.admin/docs/plan-suites/lyrikai-themes/specs/art-direction.md)

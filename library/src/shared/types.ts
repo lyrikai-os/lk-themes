@@ -41,11 +41,60 @@ export interface ThemePalette {
   success: string;
 }
 
+/** Extended text-role palette for semantic-rich skins (Skin 03+). Mode-agnostic hues; alpha tuned per mode. */
+export interface TextRolePalette {
+  // Core syntax
+  function: string;
+  method: string;
+  keyword: string;
+  type: string;
+  class: string;
+  interface: string;
+  variable: string;
+  property: string;
+  string: string;
+  decorator: string;
+  macro: string;
+  constant: string;
+  number: string;
+  tag: string;
+  comment: string;
+  parameter: string;
+
+  // Extended semantic
+  readonly: string;
+  global: string;
+  static: string;
+  namespace: string;
+  typeParameter: string;
+  enumMember: string;
+
+  // Markdown
+  markdownH1: string;
+  markdownH2: string;
+  markdownH3: string;
+  markdownLink: string;
+  markdownCode: string;
+  markdownQuote: string;
+
+  // Bracket rainbow + utility
+  bracket1: string;
+  bracket2: string;
+  bracket3: string;
+  bracket4: string;
+  bracket5: string;
+  bracket6: string;
+  faint: string;
+  error: string;
+}
+
 export interface ThemeVariation {
   slug: string;
   label: string;
   uiTheme: "vs" | "vs-dark" | "hc-black" | "hc-light";
   palette: ThemePalette;
+  textProfile?: "classic" | "semantic-rich";
+  textRoles?: TextRolePalette;
 }
 
 export interface TokenColorRule {

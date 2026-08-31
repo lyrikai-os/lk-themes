@@ -1,3 +1,9 @@
+# Art Direction — Shipped Skins (01–03)
+
+> **Catalog SoR:** Full 20-theme roster, wave assignments, and `nearestCousin` diff anchors live in [theme-catalog.md](./theme-catalog.md). After Unit 4, **`docs/wiki/CATALOG.md`** becomes the primary source of record — do not duplicate all 20 cards here. This file holds **deep art direction** for the four shipped skins only.
+
+---
+
 # Art Direction — Skin 01: Cream Bright
 
 ## Theme card
@@ -97,3 +103,61 @@ Coffee Cream light themes: warm paper ground, coral accent energy, readable brow
 - Purple-indigo glow on UI chrome
 - Copying Bearded GPL source, JSON, or hex tables verbatim
 - Chat / AI panel chrome in v1
+
+---
+
+# Art Direction — Skin 03: Role Spectrum (Bright + Dark pair)
+
+## Theme card
+
+| Field | Value |
+|-------|-------|
+| **Labels** | Lyrikai Themes Role Spectrum Bright / Role Spectrum Dark |
+| **Slugs** | `role-spectrum-bright`, `role-spectrum-dark` |
+| **uiTheme** | `vs` (bright) / `vs-dark` (dark) |
+| **textProfile** | `semantic-rich` — one HSL role table, two spectral grounds |
+| **Mood** | Text-first role spectrum; cool mist or deep indigo-black chrome; unique hue per semantic role |
+
+### Ground (varies by mode — distinct from Skins 01/02)
+
+- **Bright:** cool mist editor (`#EEF1F8`), chrome `#E4E8F2` / `#D8DEEA`, violet accent `#7C3AED`
+- **Dark:** deep indigo-black editor (`#06080F`), chrome `#0C0E18` / `#1A1D2E`, lavender accent `#C084FC`
+- **Not** Cream Bright warm cream (`#EBE5E0`) or Black Prism pure black / cyan (`#00E5FF`)
+
+### Ink (varies by mode)
+
+- **Bright:** cool ink body (`#1A1D2E`), muted periwinkle-gray comments
+- **Dark:** soft lavender-white body (`#E8EAFF`), muted cool comments
+- Comment alpha and faint punctuation opacity vary by mode; role hues resolve from shared HSL table
+
+### Text system (shared HSL table — unique hue per role)
+
+One `ROLE_SPECTRUM_TEXT_ROLES` table: `{ h, s, lLight, lDark, fontStyle? }` per role. `resolveRoleHex(role, mode)` generates foregrounds.
+
+| Role | Hue family | Style |
+|------|------------|-------|
+| Functions / methods | Azure ~h220 | bold on definitions |
+| Keywords | Amber ~h32 | — |
+| Types / class | Indigo ~h239 | — |
+| Interface | Periwinkle ~h234 | — |
+| Variables | Tangerine ~h21 | — |
+| Parameters | Teal ~h174 | italic |
+| Readonly | Slate ~h215 | — |
+| Global / static | Rose ~h347 | bold |
+| Properties | Orange ~h25 | — |
+| Strings | Emerald ~h160 | — |
+| Decorators / macros | Fuchsia ~h293 | — |
+| Constants / numbers | Red family ~h0 / h355 | — |
+| Tags | Sky ~h200 | — |
+| Namespace | Cobalt ~h224 | — |
+| Type parameters | Violet ~h270 | italic |
+| Enum members | Lime ~h85 | — |
+| Markdown h1 / h2 / h3 | Violet → fuchsia → rose | bold |
+| Bracket rainbow | 6 role hues | keyword → property |
+
+### Avoid list
+
+- Reusing Cream Bright / Black Prism ground or accent hex
+- Duplicate token rules per mode (forbidden)
+- Mode-specific syntax hue tables (use HSL lLight/lDark instead)
+- Copying Bearded GPL source, JSON, or hex tables verbatim

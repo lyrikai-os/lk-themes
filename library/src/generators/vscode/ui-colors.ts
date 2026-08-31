@@ -1,4 +1,4 @@
-import type { ThemePalette } from "../../shared/types.js";
+import type { TextRolePalette, ThemePalette } from "../../shared/types.js";
 
 /** Map palette tokens to VS Code workbench + editor UI color keys. */
 export function buildUiColors(p: ThemePalette): Record<string, string> {
@@ -277,5 +277,30 @@ export function buildUiColors(p: ThemePalette): Record<string, string> {
     "progressBar.background": p.syntaxKeyword,
     "profileBadge.background": p.accent,
     "profileBadge.foreground": p.creamPaper,
+  };
+}
+
+/** Bracket rainbow, diff, and line-highlight overrides for semantic-rich skins. */
+export function buildHighlightColors(
+  text: TextRolePalette,
+  base: ThemePalette,
+): Record<string, string> {
+  return {
+    "editor.lineHighlightBackground": `${base.accent}0f`,
+    "editor.lineHighlightBorder": base.accentSoft,
+    "editor.selectionHighlightBackground": `${base.accent}14`,
+    "editor.wordHighlightBackground": `${base.accent}1f`,
+    "editor.wordHighlightStrongBackground": `${base.accent}3d`,
+    "editorBracketHighlight.foreground1": text.bracket1,
+    "editorBracketHighlight.foreground2": text.bracket2,
+    "editorBracketHighlight.foreground3": text.bracket3,
+    "editorBracketHighlight.foreground4": text.bracket4,
+    "editorBracketHighlight.foreground5": text.bracket5,
+    "editorBracketHighlight.foreground6": text.bracket6,
+    "editorBracketHighlight.unexpectedBracket.foreground": text.error,
+    "diffEditor.insertedLineBackground": `${text.string}1a`,
+    "diffEditor.insertedTextBackground": `${text.string}1a`,
+    "diffEditor.removedLineBackground": `${text.error}1a`,
+    "diffEditor.removedTextBackground": `${text.error}1a`,
   };
 }

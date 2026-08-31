@@ -1,18 +1,36 @@
 import type { ThemeVariation, VscodeThemeJson } from "../../shared/types.js";
-import { buildUiColors } from "./ui-colors.js";
-import { buildTokenColors, buildSemanticTokenColors } from "./token-colors.js";
+import { buildHighlightColors, buildUiColors } from "./ui-colors.js";
+import {
+  buildSemanticTokenColorsClassic,
+  buildSemanticTokenColorsRich,
+  buildTokenColorsClassic,
+  buildTokenColorsSemanticRich,
+} from "./token-colors.js";
 
 export function generateVscodeTheme(variation: ThemeVariation): VscodeThemeJson {
-  const { palette, label } = variation;
+  const { palette, label, textProfile, textRoles } = variation;
+  const isSemanticRich = textProfile === "semantic-rich" && textRoles != null;
+
+  const colors = isSemanticRich
+    ? { ...buildUiColors(palette), ...buildHighlightColors(textRoles, palette) }
+    : buildUiColors(palette);
+
+  const tokenColors = isSemanticRich
+    ? buildTokenColorsSemanticRich(textRoles)
+    : buildTokenColorsClassic(palette);
+
+  const semanticTokenColors = isSemanticRich
+    ? buildSemanticTokenColorsRich(textRoles)
+    : buildSemanticTokenColorsClassic(palette);
 
   return {
     $schema: "vscode://schemas/color-theme",
     name: label,
     type: variation.uiTheme === "vs-dark" ? "dark" : "light",
-    colors: buildUiColors(palette),
-    tokenColors: buildTokenColors(palette),
+    colors,
+    tokenColors,
     semanticHighlighting: true,
-    semanticTokenColors: buildSemanticTokenColors(palette),
+    semanticTokenColors,
   };
 }
 
