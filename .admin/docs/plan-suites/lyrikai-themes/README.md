@@ -17,12 +17,12 @@ BPS planning docs for the **Lyrikai Themes** product leaf (`lyrikai.lyrikai-them
 | # | Plan | Unit | Status | Version gate |
 |---|------|------|--------|--------------|
 | 01 | [extension-scaffold](./plans/01-extension-scaffold.md) | 1 | **complete** | 0.1.0 → 0.3.1 |
-| 02 | [product-wiki](./plans/02-product-wiki.md) | 4 | planned | — |
-| 03 | [factory-scale](./plans/03-factory-scale.md) | 5 | planned | — |
-| 04 | [wave-a](./plans/04-wave-a.md) | — | planned | 0.4.0 |
-| 05 | [wave-b](./plans/05-wave-b.md) | — | planned | 0.5.0 |
-| 06 | [wave-c](./plans/06-wave-c.md) | — | planned | 0.6.0 |
-| 07 | [wave-d](./plans/07-wave-d.md) | — | planned | 1.0.0 |
+| 02 | [product-wiki](./plans/02-product-wiki.md) | 4 | **complete** | — |
+| 03 | [factory-scale](./plans/03-factory-scale.md) | 5 | **complete** | — |
+| 04 | [wave-a](./plans/04-wave-a.md) | — | **complete** | 0.4.0 |
+| 05 | [wave-b](./plans/05-wave-b.md) | — | **complete** | 0.5.0 |
+| 06 | [wave-c](./plans/06-wave-c.md) | — | **complete** | 0.6.0 |
+| 07 | [wave-d](./plans/07-wave-d.md) | — | **complete** | 1.0.0 |
 | 08 | [github-publish](./plans/08-github-publish.md) | — | planned | per wave |
 
 ## Specs & guides
@@ -62,7 +62,7 @@ Matches [END-GOAL.md](./END-GOAL.md):
 ```
 library/                          Source of truth (variations + generator)
 extensions/lyrikai-themes/        Installable VS Code extension
-docs/wiki/                        Product SoR (Unit 4 — not yet created)
+docs/wiki/                        Product SoR (Unit 4 — live)
 .admin/docs/plan-suites/lyrikai-themes/   This plan suite
 ```
 

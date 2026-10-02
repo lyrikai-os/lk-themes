@@ -1,6 +1,8 @@
 # Theme Catalog — 20-Theme Roster
 
-**Purpose:** BPS roster and cousin-diff anchor table. After Unit 4, **`docs/wiki/CATALOG.md`** becomes the primary source of record; keep this file in sync or replace with a thin pointer.
+**Purpose:** BPS roster mirror. **Primary SoR:** [`docs/wiki/CATALOG.md`](../../../../docs/wiki/CATALOG.md) — sync this file from wiki after wave ships, or treat as planning pointer only.
+
+> **Unit 4 complete.** Catalog authority lives in the product wiki. Update wiki first; mirror here if BPS agents need an offline copy.
 
 **Legend**
 

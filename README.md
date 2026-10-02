@@ -65,6 +65,10 @@ npm run build:ext      # build + package VSIX
 
 MIT — see [LICENSE](./LICENSE). All palette hex values are original Lyrikai work. Inspired by warm light “coffee cream” themes in feeling only; no GPL source or color tables copied.
 
+## Product wiki
+
+- [docs/wiki/](docs/wiki/) — catalog, install, architecture, changelog (primary SoR)
+
 ## Planning docs
 
 - [END-GOAL](.admin/docs/plan-suites/lyrikai-themes/END-GOAL.md)

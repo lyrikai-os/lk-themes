@@ -88,6 +88,26 @@ export interface TextRolePalette {
   error: string;
 }
 
+export type ReadabilityTier = "A" | "B" | "C";
+
+export type TextProfile = "classic" | "semantic-rich" | "genre";
+
+/** Locked theme card metadata — drives factory registration and cousin-diff validation. */
+export interface ThemeCard {
+  slug: string;
+  label: string;
+  uiTheme: "vs" | "vs-dark" | "hc-black" | "hc-light";
+  /** Research / concept family tag (e.g. warm coffee cream, spectral roles). */
+  family: string;
+  mood: string;
+  readabilityTier: ReadabilityTier;
+  textProfile: TextProfile;
+  /** Genre / experimental skins only. */
+  experimental?: boolean;
+  /** Cousin-diff anchor slug; omit for anchor themes. */
+  nearestCousin?: string;
+}
+
 export interface ThemeVariation {
   slug: string;
   label: string;
@@ -95,6 +115,8 @@ export interface ThemeVariation {
   palette: ThemePalette;
   textProfile?: "classic" | "semantic-rich";
   textRoles?: TextRolePalette;
+  /** Source card metadata (Unit 5 factory). */
+  card?: ThemeCard;
 }
 
 export interface TokenColorRule {

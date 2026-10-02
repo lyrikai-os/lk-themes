@@ -10,6 +10,8 @@
   "scripts": {
     "build": "npm run build -w library",
     "build:ext": "npm run build && npm run package -w lyrikai-themes",
-    "package": "npm run package -w lyrikai-themes"
+    "package": "npm run package -w lyrikai-themes",
+    "validate:themes": "npm run validate:themes -w library",
+    "test": "npm run test -w library"
   }
 }
