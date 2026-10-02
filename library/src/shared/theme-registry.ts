@@ -1,16 +1,11 @@
-import type { ThemeVariation } from "../shared/types.js";
-import { blackPrism } from "../variations/black-prism.js";
-import { creamBright } from "../variations/cream-bright.js";
-import { roleSpectrumBright } from "../variations/role-spectrum-bright.js";
-import { roleSpectrumDark } from "../variations/role-spectrum-dark.js";
+import { themeCards } from "../factory/theme-cards.js";
+import { cardToVariation, registerCards } from "../factory/theme-factory.js";
+import type { ThemeVariation } from "./types.js";
 
-/** Registry of all theme variations. Add new skins here. */
-export const themeRegistry: ThemeVariation[] = [
-  creamBright,
-  blackPrism,
-  roleSpectrumBright,
-  roleSpectrumDark,
-];
+registerCards(themeCards);
+
+/** Registry of all theme variations — driven by ThemeCard metadata. */
+export const themeRegistry: ThemeVariation[] = themeCards.map((card) => cardToVariation(card));
 
 export function getVariationBySlug(slug: string): ThemeVariation | undefined {
   return themeRegistry.find((v) => v.slug === slug);
@@ -19,3 +14,5 @@ export function getVariationBySlug(slug: string): ThemeVariation | undefined {
 export function getAllVariations(): ThemeVariation[] {
   return [...themeRegistry];
 }
+
+export { themeCards };

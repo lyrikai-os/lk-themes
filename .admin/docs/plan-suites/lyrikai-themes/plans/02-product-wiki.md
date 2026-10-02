@@ -1,6 +1,6 @@
 # Plan 02 — Product Wiki (Unit 4)
 
-**Status:** planned  
+**Status:** complete  
 **Unit:** 4  
 **Version gate:** none (docs-only unit; precedes wave releases)
 

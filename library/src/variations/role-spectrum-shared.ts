@@ -1,11 +1,8 @@
+import { hslToHex, resolveRoleHex, type HslRoleDefinition } from "../shared/color-math.js";
 import type { TextRolePalette, ThemePalette, ThemeVariation } from "../shared/types.js";
 
 /** Canonical HSL + fontStyle table — one text system; lightness tuned per mode. */
-export interface TextRoleDefinition {
-  h: number;
-  s: number;
-  lLight: number;
-  lDark: number;
+export interface TextRoleDefinition extends HslRoleDefinition {
   fontStyle?: string;
 }
 
@@ -57,52 +54,21 @@ const MODE_FAINT: Record<"light" | "dark", string> = {
   dark: "#E8EAFF66",
 };
 
-/** Convert HSL (h 0–360, s/l 0–100) to #RRGGBB. */
-export function hslToHex(h: number, s: number, l: number): string {
-  const sNorm = s / 100;
-  const lNorm = l / 100;
-  const c = (1 - Math.abs(2 * lNorm - 1)) * sNorm;
-  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
-  const m = lNorm - c / 2;
-
-  let r = 0;
-  let g = 0;
-  let b = 0;
-
-  if (h < 60) {
-    r = c;
-    g = x;
-  } else if (h < 120) {
-    r = x;
-    g = c;
-  } else if (h < 180) {
-    g = c;
-    b = x;
-  } else if (h < 240) {
-    g = x;
-    b = c;
-  } else if (h < 300) {
-    r = x;
-    b = c;
-  } else {
-    r = c;
-    b = x;
-  }
-
-  const toHex = (v: number) => Math.round((v + m) * 255).toString(16).padStart(2, "0");
-  return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
-}
-
 /** Resolve a role's foreground hex for light or dark mode. */
-export function resolveRoleHex(role: string, mode: "light" | "dark"): string {
-  const def = ROLE_SPECTRUM_TEXT_ROLES[role]!;
-  const lightness = mode === "light" ? def.lLight : def.lDark;
-  return hslToHex(def.h, def.s, lightness);
+export function resolveRoleHexForRole(
+  role: string,
+  mode: "light" | "dark",
+  roles: Record<string, TextRoleDefinition> = ROLE_SPECTRUM_TEXT_ROLES,
+): string {
+  return resolveRoleHex(roles[role]!, mode);
 }
 
 /** Build the full semantic-rich TextRolePalette for a mode. */
-export function buildTextRolePalette(mode: "light" | "dark"): TextRolePalette {
-  const hex = (role: string) => resolveRoleHex(role, mode);
+export function buildTextRolePalette(
+  mode: "light" | "dark",
+  roles: Record<string, TextRoleDefinition> = ROLE_SPECTRUM_TEXT_ROLES,
+): TextRolePalette {
+  const hex = (role: string) => resolveRoleHexForRole(role, mode, roles);
 
   return {
     function: hex("function"),
@@ -145,8 +111,11 @@ export function buildTextRolePalette(mode: "light" | "dark"): TextRolePalette {
 }
 
 /** Spectral Lyrikai grounds — cool mist (light) or deep indigo-black (dark). Syntax from HSL role table. */
-export function createRoleSpectrumGround(mode: "light" | "dark"): ThemePalette {
-  const text = buildTextRolePalette(mode);
+export function createRoleSpectrumGround(
+  mode: "light" | "dark",
+  roles: Record<string, TextRoleDefinition> = ROLE_SPECTRUM_TEXT_ROLES,
+): ThemePalette {
+  const text = buildTextRolePalette(mode, roles);
 
   if (mode === "light") {
     return {
@@ -181,7 +150,7 @@ export function createRoleSpectrumGround(mode: "light" | "dark"): ThemePalette {
       syntaxComment: text.comment,
 
       error: text.error,
-      warning: resolveRoleHex("keyword", mode),
+      warning: resolveRoleHexForRole("keyword", mode, roles),
       info: text.function,
       success: text.string,
     };
@@ -219,7 +188,7 @@ export function createRoleSpectrumGround(mode: "light" | "dark"): ThemePalette {
     syntaxComment: text.comment,
 
     error: text.error,
-    warning: resolveRoleHex("keyword", mode),
+    warning: resolveRoleHexForRole("keyword", mode, roles),
     info: text.function,
     success: text.string,
   };
@@ -244,3 +213,6 @@ export function createRoleSpectrumVariation(mode: "light" | "dark"): ThemeVariat
     textRoles: buildTextRolePalette(mode),
   };
 }
+
+// Re-export color-math helpers used by variations and tests.
+export { hslToHex, resolveRoleHex };

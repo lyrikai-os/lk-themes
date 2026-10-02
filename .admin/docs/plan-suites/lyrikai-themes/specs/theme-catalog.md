@@ -1,6 +1,8 @@
-# Theme Catalog — 20-Theme Roster
+# Theme Catalog — 29-Theme Roster
 
-**Purpose:** BPS roster and cousin-diff anchor table. After Unit 4, **`docs/wiki/CATALOG.md`** becomes the primary source of record; keep this file in sync or replace with a thin pointer.
+**Purpose:** BPS roster mirror. **Primary SoR:** [`docs/wiki/CATALOG.md`](../../../../docs/wiki/CATALOG.md) — sync this file from wiki after wave ships, or treat as planning pointer only.
+
+> **Unit 4 complete.** Catalog authority lives in the product wiki. Update wiki first; mirror here if BPS agents need an offline copy.
 
 **Legend**
 
@@ -33,6 +35,15 @@
 | 18 | `newspaper-ink` | Lyrikai Themes Newspaper Ink | `vs` | genre | C | planned | D | `cream-bright` | newspaper print grayscale |
 | 19 | `gothic-crimson` | Lyrikai Themes Gothic Crimson | `vs-dark` | genre | C | planned | D | `sakura-night` | gothic cathedral crimson |
 | 20 | `honeycomb-amber` | Lyrikai Themes Honeycomb Amber | `vs` | genre | C | planned | D | `desert-sunset` | honeycomb warm amber |
+| 21 | `studio-black` | Lyrikai Themes Studio Black | `vs-dark` | classic | B | shipped | PS | `black-prism` | production studio |
+| 22 | `receipt-paper` | Lyrikai Themes Receipt Paper | `vs` | classic | B | shipped | PS | `cream-bright` | production studio |
+| 23 | `imprint-ufopia` | Lyrikai Themes Imprint Ufopia | `vs-dark` | genre | C | shipped | PS | `studio-black` | production studio imprint |
+| 24 | `imprint-lighthorse` | Lyrikai Themes Imprint Lighthorse | `vs-dark` | genre | C | shipped | PS | `imprint-ufopia` | production studio imprint |
+| 25 | `imprint-eight-nine` | Lyrikai Themes Imprint 8++--9 | `vs-dark` | genre | C | shipped | PS | `imprint-lighthorse` | production studio imprint |
+| 26 | `imprint-system80` | Lyrikai Themes Imprint System80 | `vs-dark` | genre | C | shipped | PS | `imprint-eight-nine` | production studio imprint |
+| 27 | `imprint-intellia` | Lyrikai Themes Imprint Intellia | `vs-dark` | genre | C | shipped | PS | `imprint-system80` | production studio imprint |
+| 28 | `imprint-string-theory` | Lyrikai Themes Imprint String Theory | `vs-dark` | genre | C | shipped | PS | `imprint-intellia` | production studio imprint |
+| 29 | `imprint-we-are-the-ones` | Lyrikai Themes Imprint We Are The Ones | `vs-dark` | genre | C | shipped | PS | `imprint-string-theory` | production studio imprint |
 
 ## Wave summary
 
@@ -43,6 +54,7 @@
 | B | 0.5.0 | circus-night, vegas-neon, rainbow-code, vapor-dream |
 | C | 0.6.0 | tron-grid, arcade-cabinet, phosphor-green, sakura-night |
 | D | 1.0.0 | deep-ocean, desert-sunset, newspaper-ink, gothic-crimson, honeycomb-amber |
+| PS | 1.1.0 | studio-black, receipt-paper, imprint-ufopia, imprint-lighthorse, imprint-eight-nine, imprint-system80, imprint-intellia, imprint-string-theory, imprint-we-are-the-ones |
 
 ## Anchor themes (cousin-diff roots)
 

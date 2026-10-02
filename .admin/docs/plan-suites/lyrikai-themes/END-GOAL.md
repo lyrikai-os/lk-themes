@@ -31,7 +31,9 @@ Ship **20 original MIT editor themes** in one VS Code/Cursor extension, built fr
 | C | 0.6.0 | tron-grid, arcade-cabinet, phosphor-green, sakura-night | [06-wave-c](./plans/06-wave-c.md) |
 | D | 1.0.0 | deep-ocean, desert-sunset, newspaper-ink, gothic-crimson, honeycomb-amber | [07-wave-d](./plans/07-wave-d.md) |
 
-Full roster with tiers and cousin-diff anchors: [specs/theme-catalog.md](./specs/theme-catalog.md).
+Full roster with tiers and cousin-diff anchors: **[docs/wiki/CATALOG.md](../../../docs/wiki/CATALOG.md)** (primary SoR). BPS mirror: [specs/theme-catalog.md](./specs/theme-catalog.md).
+
+**Product wiki:** [docs/wiki/README.md](../../../docs/wiki/README.md)
 
 ## Program units (plan suite)
 

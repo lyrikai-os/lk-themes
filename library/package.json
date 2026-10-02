@@ -6,7 +6,9 @@
   "type": "module",
   "main": "./dist/build.js",
   "scripts": {
-    "build": "tsx src/build.ts"
+    "build": "tsx src/build.ts",
+    "validate:themes": "tsx src/validate-themes.ts",
+    "test": "tsx --test src/**/*.test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

@@ -5,7 +5,7 @@
 1. **Original MIT palette** — all hex in `library/src/variations/` must be Lyrikai-authored; no Bearded GPL JSON/hex verbatim.
 2. **v1 scope** — editor + workbench tokens only; chat chrome out of scope.
 3. **No user settings edits** — never write to user `settings.json`.
-4. **No tip / meta wiki** — except thin END-GOAL under `.admin/docs/plan-suites/lyrikai-themes/`.
+4. **No tip / meta wiki** — except explicit allowlist: `.admin/docs/plan-suites/lyrikai-themes/` **and** `docs/wiki/**` (product SoR).
 
 ## end_goal_ref
 

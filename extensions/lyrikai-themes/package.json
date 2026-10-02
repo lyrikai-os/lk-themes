@@ -1,19 +1,37 @@
 {
   "name": "lyrikai-themes",
   "displayName": "Lyrikai Themes",
-  "description": "Warm cream, pure-black, and Role Spectrum editor themes with high-chroma syntax — original MIT work by Lyrikai.",
-  "version": "0.3.1",
+  "description": "Twenty-nine original MIT editor themes — cream, black, Role Spectrum, genre waves, and the Production Studio set — with high-chroma syntax by Lyrikai.",
+  "version": "1.1.0",
   "publisher": "lyrikai",
   "license": "MIT",
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Themes"],
-  "keywords": ["theme", "light", "dark", "cream", "black", "warm", "lyrikai", "syntax", "semantic"],
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "light",
+    "dark",
+    "cream",
+    "black",
+    "warm",
+    "lyrikai",
+    "syntax",
+    "semantic",
+    "genre",
+    "neon",
+    "vaporwave",
+    "production",
+    "studio",
+    "print"
+  ],
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lyrikai/ide-styles"
+    "url": "https://github.com/lyrikai-os/lk-themes"
   },
   "contributes": {
     "themes": [
@@ -36,11 +54,136 @@
         "label": "Lyrikai Themes Role Spectrum Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/lyrikai-themes-role-spectrum-dark.json"
+      },
+      {
+        "label": "Lyrikai Themes Cosmic Void",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-cosmic-void.json"
+      },
+      {
+        "label": "Lyrikai Themes Comic Ink",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-comic-ink.json"
+      },
+      {
+        "label": "Lyrikai Themes Glitch Matrix",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-glitch-matrix.json"
+      },
+      {
+        "label": "Lyrikai Themes Circus Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-circus-night.json"
+      },
+      {
+        "label": "Lyrikai Themes Vegas Neon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-vegas-neon.json"
+      },
+      {
+        "label": "Lyrikai Themes Rainbow Code",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-rainbow-code.json"
+      },
+      {
+        "label": "Lyrikai Themes Vapor Dream",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-vapor-dream.json"
+      },
+      {
+        "label": "Lyrikai Themes Tron Grid",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-tron-grid.json"
+      },
+      {
+        "label": "Lyrikai Themes Arcade Cabinet",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-arcade-cabinet.json"
+      },
+      {
+        "label": "Lyrikai Themes Phosphor Green",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-phosphor-green.json"
+      },
+      {
+        "label": "Lyrikai Themes Sakura Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-sakura-night.json"
+      },
+      {
+        "label": "Lyrikai Themes Deep Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-deep-ocean.json"
+      },
+      {
+        "label": "Lyrikai Themes Desert Sunset",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-desert-sunset.json"
+      },
+      {
+        "label": "Lyrikai Themes Newspaper Ink",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-newspaper-ink.json"
+      },
+      {
+        "label": "Lyrikai Themes Gothic Crimson",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-gothic-crimson.json"
+      },
+      {
+        "label": "Lyrikai Themes Honeycomb Amber",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-honeycomb-amber.json"
+      },
+      {
+        "label": "Lyrikai Themes Studio Black",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-studio-black.json"
+      },
+      {
+        "label": "Lyrikai Themes Receipt Paper",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-receipt-paper.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Ufopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-ufopia.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Lighthorse",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-lighthorse.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint 8++--9",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-eight-nine.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint System80",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-system80.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Intellia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-intellia.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint String Theory",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-string-theory.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint We Are The Ones",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-we-are-the-ones.json"
       }
     ]
   },
   "scripts": {
-    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-0.3.1.vsix"
+    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-1.1.0.vsix"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.0"
