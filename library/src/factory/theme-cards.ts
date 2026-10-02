@@ -1,6 +1,6 @@
 import type { ThemeCard } from "../shared/types.js";
 
-/** Full 20-theme catalog — ThemeCard metadata for factory + validation. */
+/** Full 29-theme catalog — ThemeCard metadata for factory + validation. */
 export const themeCards: ThemeCard[] = [
   { slug: "cream-bright", label: "Lyrikai Themes Cream Bright", uiTheme: "vs", family: "warm coffee cream", mood: "Warm coffee-cream paper, terracotta accent, high-chroma syntax", readabilityTier: "A", textProfile: "classic" },
   { slug: "black-prism", label: "Lyrikai Themes Black Prism", uiTheme: "vs-dark", family: "pure black electric", mood: "Pure black ground, electric cyan accent, high-chroma syntax", readabilityTier: "A", textProfile: "classic" },
@@ -22,6 +22,15 @@ export const themeCards: ThemeCard[] = [
   { slug: "newspaper-ink", label: "Lyrikai Themes Newspaper Ink", uiTheme: "vs", family: "newspaper print grayscale", mood: "Newsprint off-white; ink-black body; restrained syntax", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "cream-bright" },
   { slug: "gothic-crimson", label: "Lyrikai Themes Gothic Crimson", uiTheme: "vs-dark", family: "gothic cathedral crimson", mood: "Cathedral stone dark; stained-glass crimson accent", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "sakura-night" },
   { slug: "honeycomb-amber", label: "Lyrikai Themes Honeycomb Amber", uiTheme: "vs", family: "honeycomb warm amber", mood: "Honeycomb warm amber ground; golden wax accent", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "desert-sunset" },
+  { slug: "studio-black", label: "Lyrikai Themes Studio Black", uiTheme: "vs-dark", family: "production studio", mood: "Control room warm black; yellow at the gate; six-band spectrum syntax", readabilityTier: "B", textProfile: "classic", nearestCousin: "black-prism" },
+  { slug: "receipt-paper", label: "Lyrikai Themes Receipt Paper", uiTheme: "vs", family: "production studio", mood: "Gate receipt cream; ink body; blue signed-ink labels", readabilityTier: "B", textProfile: "classic", nearestCousin: "cream-bright" },
+  { slug: "imprint-ufopia", label: "Lyrikai Themes Imprint Ufopia", uiTheme: "vs-dark", family: "production studio imprint", mood: "Ufopia arc-ring; teal tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "studio-black" },
+  { slug: "imprint-lighthorse", label: "Lyrikai Themes Imprint Lighthorse", uiTheme: "vs-dark", family: "production studio imprint", mood: "Lighthorse arch; orange tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-ufopia" },
+  { slug: "imprint-eight-nine", label: "Lyrikai Themes Imprint 8++--9", uiTheme: "vs-dark", family: "production studio imprint", mood: "8++--9 spark; pink tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-lighthorse" },
+  { slug: "imprint-system80", label: "Lyrikai Themes Imprint System80", uiTheme: "vs-dark", family: "production studio imprint", mood: "System80 grid; blue tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-eight-nine" },
+  { slug: "imprint-intellia", label: "Lyrikai Themes Imprint Intellia", uiTheme: "vs-dark", family: "production studio imprint", mood: "Intellia sparkle; yellow tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-system80" },
+  { slug: "imprint-string-theory", label: "Lyrikai Themes Imprint String Theory", uiTheme: "vs-dark", family: "production studio imprint", mood: "String Theory wave; red tile on warm black", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-intellia" },
+  { slug: "imprint-we-are-the-ones", label: "Lyrikai Themes Imprint We Are The Ones", uiTheme: "vs-dark", family: "production studio imprint", mood: "We Are The Ones star; true-black stage, cream and teal", readabilityTier: "C", textProfile: "genre", experimental: true, nearestCousin: "imprint-string-theory" },
 ];
 
 export function getShippedCards(): ThemeCard[] {

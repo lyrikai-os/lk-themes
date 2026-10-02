@@ -17,6 +17,15 @@ import { desertSunset } from "../variations/desert-sunset.js";
 import { newspaperInk } from "../variations/newspaper-ink.js";
 import { gothicCrimson } from "../variations/gothic-crimson.js";
 import { honeycombAmber } from "../variations/honeycomb-amber.js";
+import { studioBlack } from "../variations/studio-black.js";
+import { receiptPaper } from "../variations/receipt-paper.js";
+import { imprintUfopia } from "../variations/imprint-ufopia.js";
+import { imprintLighthorse } from "../variations/imprint-lighthorse.js";
+import { imprintEightNine } from "../variations/imprint-eight-nine.js";
+import { imprintSystem80 } from "../variations/imprint-system80.js";
+import { imprintIntellia } from "../variations/imprint-intellia.js";
+import { imprintStringTheory } from "../variations/imprint-string-theory.js";
+import { imprintWeAreTheOnes } from "../variations/imprint-we-are-the-ones.js";
 import {
   buildTextRolePalette,
   createRoleSpectrumGround,
@@ -67,6 +76,11 @@ const WAVE_VARIATIONS: Record<string, ThemeVariation> = {
   "phosphor-green": phosphorGreen, "sakura-night": sakuraNight, "deep-ocean": deepOcean,
   "desert-sunset": desertSunset, "newspaper-ink": newspaperInk, "gothic-crimson": gothicCrimson,
   "honeycomb-amber": honeycombAmber,
+  "studio-black": studioBlack, "receipt-paper": receiptPaper,
+  "imprint-ufopia": imprintUfopia, "imprint-lighthorse": imprintLighthorse,
+  "imprint-eight-nine": imprintEightNine, "imprint-system80": imprintSystem80,
+  "imprint-intellia": imprintIntellia, "imprint-string-theory": imprintStringTheory,
+  "imprint-we-are-the-ones": imprintWeAreTheOnes,
 };
 
 const variationBuilders: Record<string, () => ThemeVariation> = {

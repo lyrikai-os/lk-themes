@@ -6,7 +6,23 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-- (none — catalog at 1.0.0)
+- (none — catalog at 1.1.0)
+
+---
+
+## [1.1.0] — 2026-10-02
+
+### Added
+
+- **Production Studio set** — nine themes drawn from the LYRIKAI Production Studio design system v1-3:
+  - Studio Black (dark) and Receipt Paper (light)
+  - Seven imprint themes: Ufopia, Lighthorse, 8++--9, System80, Intellia, String Theory, We Are The Ones
+- `production-studio-shared.ts` — design-system tokens and `buildImprintPalette`
+
+### Changed
+
+- Extension ships 29 themes
+- Extension `repository.url` now points at `lyrikai-os/lk-themes`
 
 ---
 

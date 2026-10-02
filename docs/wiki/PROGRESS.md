@@ -6,8 +6,8 @@ Build and release tracking for the 20-theme program.
 
 | Metric | Value |
 |--------|-------|
-| **Extension version** | 1.0.0 |
-| **Themes shipped** | 20 / 20 |
+| **Extension version** | 1.1.0 |
+| **Themes shipped** | 29 |
 | **Last feature commit** | pending — Unit 5 + Waves A–D closeout |
 | **Open PR** | [#1 — Role Spectrum v0.3.1 + BPS 20-theme program](https://github.com/lyrikai-os/lk-themes/pull/1) |
 
@@ -22,6 +22,7 @@ All 20 slugs — see [CATALOG.md](./CATALOG.md) for cards and cousin anchors.
 | B | 0.5.0 | 4 |
 | C | 0.6.0 | 4 |
 | D | 1.0.0 | 5 |
+| PS (Production Studio) | 1.1.0 | 9 |
 
 ## Program units
 
@@ -43,6 +44,7 @@ All 20 slugs — see [CATALOG.md](./CATALOG.md) for cards and cousin anchors.
 | 2026-08-30 | Unit 4 — Product wiki landed |
 | 2026-08-30 | Unit 5 — Factory scale + cousin-diff validation |
 | 2026-08-30 | v1.0.0 — 20/20 catalog closeout (Waves A–D) |
+| 2026-10-02 | v1.1.0 — Production Studio set (9 themes) |
 
 ## Next
 

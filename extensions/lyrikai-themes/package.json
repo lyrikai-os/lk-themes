@@ -1,8 +1,8 @@
 {
   "name": "lyrikai-themes",
   "displayName": "Lyrikai Themes",
-  "description": "Twenty original MIT editor themes — cream, black, Role Spectrum, and genre waves — with high-chroma syntax by Lyrikai.",
-  "version": "1.0.0",
+  "description": "Twenty-nine original MIT editor themes — cream, black, Role Spectrum, genre waves, and the Production Studio set — with high-chroma syntax by Lyrikai.",
+  "version": "1.1.0",
   "publisher": "lyrikai",
   "license": "MIT",
   "engines": {
@@ -23,12 +23,15 @@
     "semantic",
     "genre",
     "neon",
-    "vaporwave"
+    "vaporwave",
+    "production",
+    "studio",
+    "print"
   ],
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lyrikai/ide-styles"
+    "url": "https://github.com/lyrikai-os/lk-themes"
   },
   "contributes": {
     "themes": [
@@ -131,11 +134,56 @@
         "label": "Lyrikai Themes Honeycomb Amber",
         "uiTheme": "vs",
         "path": "./themes/lyrikai-themes-honeycomb-amber.json"
+      },
+      {
+        "label": "Lyrikai Themes Studio Black",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-studio-black.json"
+      },
+      {
+        "label": "Lyrikai Themes Receipt Paper",
+        "uiTheme": "vs",
+        "path": "./themes/lyrikai-themes-receipt-paper.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Ufopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-ufopia.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Lighthorse",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-lighthorse.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint 8++--9",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-eight-nine.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint System80",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-system80.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint Intellia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-intellia.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint String Theory",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-string-theory.json"
+      },
+      {
+        "label": "Lyrikai Themes Imprint We Are The Ones",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lyrikai-themes-imprint-we-are-the-ones.json"
       }
     ]
   },
   "scripts": {
-    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-1.0.0.vsix"
+    "package": "vsce package --no-dependencies --out ./releases/lyrikai-themes-1.1.0.vsix"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.0"
